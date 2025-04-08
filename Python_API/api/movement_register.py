@@ -8,7 +8,7 @@ rows = [(1, "First"),
 
 
 def query_db(query, args=(), one=False):
-    db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+    db_connection_info = 'user/pass@ip/sid'
     con = cx_Oracle.connect(db_connection_info)
     cur_oracle = con.cursor()
     cur_oracle.execute(query, args)
@@ -19,7 +19,7 @@ def query_db(query, args=(), one=False):
 
 def movement_register(request):
     if request.method == 'GET':
-        db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+        db_connection_info = 'user/pass@ip/sid'
         con = cx_Oracle.connect(db_connection_info)
         cur_oracle = con.cursor()
         print(request.GET)
@@ -32,7 +32,7 @@ def movement_register(request):
 
 def ins_movement_register(request):
     if request.method == 'GET':
-        db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+        db_connection_info = 'user/pass@ip/sid'
         con = cx_Oracle.connect(db_connection_info)
         cur_oracle = con.cursor()
         print(request.GET)
@@ -58,7 +58,7 @@ def myconverter(o):
 
 def query_movement_register(request):
     if request.method == 'GET':
-        db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+        db_connection_info = 'user/pass@ip/sid'
         con = cx_Oracle.connect(db_connection_info)
         cur_oracle = con.cursor()
         print(request.GET)
@@ -86,7 +86,7 @@ def query_movement_register(request):
 
 def query_movement_register_all(request):
     if request.method == 'GET':
-        db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+        db_connection_info = 'user/pass@ip/sid'
         con = cx_Oracle.connect(db_connection_info)
         cur_oracle = con.cursor()
         print(request.GET)
@@ -112,7 +112,7 @@ def query_movement_register_all(request):
 
 def upd_movement_register(request):
     if request.method == 'GET':
-        db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+        db_connection_info = 'user/pass@ip/sid'
         con = cx_Oracle.connect(db_connection_info)
         cur_oracle = con.cursor()
         print(request.GET)
@@ -134,7 +134,7 @@ def upd_movement_register(request):
 
 def del_movement_register(request):
     if request.method == 'GET':
-        db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+        db_connection_info = 'user/pass@ip/sid'
         con = cx_Oracle.connect(db_connection_info)
         cur_oracle = con.cursor()
         print(request.GET)
