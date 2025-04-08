@@ -5,12 +5,12 @@ import json, ast
 rows = [ (1,"First" ),
          (2,"Second" ) ]
 		 
-db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+db_connection_info = 'user/pass@ip/sid'
 con = cx_Oracle.connect(db_connection_info)
 cur_oracle = con.cursor()
          
 def query_db(query, args=(), one=False):
-    db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+    db_connection_info = 'user/pass@ip/sid'
     con = cx_Oracle.connect(db_connection_info)
     cur_oracle = con.cursor()
     cur_oracle.execute(query, args)
@@ -21,7 +21,7 @@ def query_db(query, args=(), one=False):
          
 def user_authentication(request):
     #if request.method == 'POST':
-    db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+    db_connection_info = 'user/pass@ip/sid'
     con = cx_Oracle.connect(db_connection_info)
     cur_oracle = con.cursor()
     print(request.GET)
@@ -43,7 +43,7 @@ def user_authentication(request):
     return HttpResponse(l_json_output_1)
 def user_priv(request):    
     if request.method == 'GET':
-        db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+        db_connection_info = 'user/pass@ip/sid'
         con = cx_Oracle.connect(db_connection_info)
         cur_oracle = con.cursor()
         print(request.GET)
