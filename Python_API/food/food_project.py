@@ -20,7 +20,7 @@ def query_units(request):
 
 def ins_outlet_order_mst(request):
 	if request.method == 'GET':
-		db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'		
+		db_connection_info = 'db_user/db_pass@db_server_id/sid'		
 		con = cx_Oracle.connect(db_connection_info)
 		cur_oracle = con.cursor()
 		l_data = request.GET
@@ -43,7 +43,7 @@ def ins_outlet_order_mst(request):
 			
 def upd_outlet_order_mst(request):
 	if request.method == 'GET':
-		db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+		db_connection_info = 'db_user/db_pass@db_server_id/sid'
 		con = cx_Oracle.connect(db_connection_info)
 		cur_oracle = con.cursor()
 		l_data = request.GET
@@ -62,7 +62,7 @@ def upd_outlet_order_mst(request):
 		return HttpResponse(True)
 def ins_outlet_order_dtl(request):
 	if request.method == 'GET':
-		db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+		db_connection_info = 'db_user/db_pass@db_server_id/sid'
 		con = cx_Oracle.connect(db_connection_info)
 		cur_oracle = con.cursor()
 		l_data = request.GET
@@ -119,7 +119,7 @@ def del_outlet_order_dtl(request):
 
 def del_outlet_order(request):
 	if request.method == 'GET':
-		db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+		db_connection_info = 'db_user/db_pass@db_server_id/sid'
 		con = cx_Oracle.connect(db_connection_info)
 		cur_oracle = con.cursor()
 		l_data = request.GET
@@ -133,7 +133,7 @@ def del_outlet_order(request):
 
 def food_category_product(request):
 	if request.method == 'GET':
-		db_connection_info = 'bottomerp/dekkkoerp#sdi#@192.168.66.24/dcoproddb1'
+		db_connection_info = 'db_user/db_pass@db_server_id/sid'
 		con = cx_Oracle.connect(db_connection_info)
 		cur_oracle = con.cursor()
 		print(request.GET)
@@ -194,7 +194,7 @@ def food_category_product(request):
 
 def trade_offer(request):
 	if request.method == 'GET':
-		db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+		db_connection_info = 'db_user/db_pass@db_server_id/sid'
 		con = cx_Oracle.connect(db_connection_info)
 		cur_oracle = con.cursor()
 		print(request.GET)
@@ -230,7 +230,7 @@ def myconverter(o):
 
 def query_outlet_order_mst(request):
     if request.method == 'GET':
-        db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+        db_connection_info = 'db_user/db_pass@db_server_id/sid'
         con = cx_Oracle.connect(db_connection_info)
         cur_oracle = con.cursor()
         print(request.GET)
@@ -246,7 +246,7 @@ def query_outlet_order_mst(request):
 
 def query_outlet_order_dtl(request):
     if request.method == 'GET':
-        db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+        db_connection_info = 'db_user/db_pass@db_server_id/sid'
         con = cx_Oracle.connect(db_connection_info)
         cur_oracle = con.cursor()
         print(request.GET)
@@ -261,7 +261,7 @@ def query_outlet_order_dtl(request):
         return HttpResponse(l_json_output)
 
 def query_db(query, args=(), one=False):
-    db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+    db_connection_info = 'db_user/db_pass@db_server_id/sid'
     con = cx_Oracle.connect(db_connection_info)
     cur_oracle = con.cursor()
     cur_oracle.execute(query, args)
