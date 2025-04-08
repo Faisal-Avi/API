@@ -10,7 +10,7 @@ import sys
 import json
 import time
 
-db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+db_connection_info = 'user/pass@ip/sid'
 con = cx_Oracle.connect(db_connection_info)
 
 oracle_sql = '''SELECT DISTINCT sbu_short_form, TO_CHAR(WM_CONCAT(DISTINCT dept_name)) sbu_wise_dept
@@ -24,7 +24,7 @@ cur_oracle.execute(oracle_sql);
 l_list = cur_oracle.fetchall()
 
 def query_db(query, args=(), one=False):
-    db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+    db_connection_info = 'user/pass@ip/sid'
     con = cx_Oracle.connect(db_connection_info)
     cur_oracle = con.cursor()
     cur_oracle.execute(query, args)
