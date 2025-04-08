@@ -13,7 +13,7 @@ import time
 oracle_sql = '''SELECT * FROM hrm_attendance_info'''                      
 
 def query_db(query, args=(), one=False):
-    db_connection_info = 'bottomerp/dekkkoerp#sdi#@192.168.66.24/dcoproddb1'
+    db_connection_info = 'user/pass@ip/sid'
     con = cx_Oracle.connect(db_connection_info)
     cur_oracle = con.cursor()
     cur_oracle.execute(query, args)
