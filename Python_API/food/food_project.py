@@ -4,7 +4,7 @@ import cx_Oracle
 import json, ast
 import datetime
 
-db_connection_info = 'bottomerp/dekkkoerp#sdi#@103.199.108.43/dcoproddb1'
+db_connection_info = 'db_user/db_pass@db_server_id/sid'
 
 def query_units(request):
 	if request.method == 'GET':
