@@ -10,7 +10,7 @@ import sys
 import json
 import time
 
-db_connection_info = 'bottomerp/dekkkoerp#sdi#@192.168.66.24/dcoproddb1'
+db_connection_info = 'db_user/db_pass@db_server_id/sid'
 con = cx_Oracle.connect(db_connection_info)
 
 oracle_sql = '''SELECT DISTINCT sbu_short_form
@@ -20,7 +20,7 @@ cur_oracle.execute(oracle_sql);
 l_list = cur_oracle.fetchall()
 
 def query_db(query, args=(), one=False):
-    db_connection_info = 'bottomerp/dekkkoerp#sdi#@192.168.66.24/dcoproddb1'
+    db_connection_info = 'db_user/db_pass@db_server_id/sid'
     con = cx_Oracle.connect(db_connection_info)
     cur_oracle = con.cursor()
     cur_oracle.execute(query, args)
