@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 import cx_Oracle
 
 def excel_view(request):
-    db_connection_info = 'bottomerp/OurSDi3RpT3#mB2@192.168.66.24/dcoproddb1'
+    db_connection_info = 'user/pass@ip/sid'
     con = cx_Oracle.connect(db_connection_info)
     cur = con.cursor()
 
